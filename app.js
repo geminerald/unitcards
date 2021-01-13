@@ -6,8 +6,8 @@ console.log("App connected")
 
 const inputName = document.getElementById('input-name');
 const inputImage = document.getElementById('input-image');
-const inputtype = document.getElementById('input-type');
-const inputcost = document.getElementById('input-cost');
+const inputType = document.getElementById('input-type');
+const inputCost = document.getElementById('input-cost');
 const inputAttack = document.getElementById('input-attack');
 const inputDefence = document.getElementById('input-defence');
 const inputPower = document.getElementById('input-power');
@@ -40,6 +40,13 @@ const updateBtn = document.getElementById('update');
 
 updateBtn.addEventListener('click',()=>{
     cardName.innerHTML = inputName.value
+    cardType.innerHTML = inputType.value
+    cardCost.innerHTML = inputCost.value
     cardAttack.innerHTML = `+ ${inputAttack.value}`
+    cardDefence.innerHTML = `+ ${inputDefence.value}`
+    cardPower.innerHTML = `+ ${inputPower.value}`
+    cardToughness.innerHTML = `+ ${inputToughness.value}`
+    cardSize.innerHTML = `+ ${inputSize.value}`
+    cardMorale.innerHTML = `+ ${inputMorale.value}`
 
 })
