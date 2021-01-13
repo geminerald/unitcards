@@ -14,10 +14,11 @@ const inputPower = document.getElementById('input-power');
 const inputToughness = document.getElementById('input-toughness');
 const inputMorale = document.getElementById('input-morale');
 const inputSize = document.getElementById('input-size');
-const inputTraits = document.getElementById('input-traits');
-const inputTraitsValues = inputTraits.value
-const allInputs = document.getElementsByTagName('input')
 
+// Checkbox Selectors
+
+const undeadCheckbox = document.getElementById("Undead")
+const amphibiousCheckbox = document.getElementById("Amphibious")
 
 // Output Selectors
 
@@ -53,8 +54,7 @@ updateBtn.addEventListener('click', () => {
     cardToughness.innerHTML = `${inputToughness.value}`
     cardSize.innerHTML = `${inputSize.value}`
     cardMorale.innerHTML = `+ ${inputMorale.value}`
-    cardTraits.innerHTML = checkTraits(inputTraits.value);
-
+    cardTraits.innerHTML = checkTraits();
     inputName.value = cardName.innerHTML
 
 });
@@ -72,24 +72,22 @@ clearBtn.addEventListener('click',  () => {
     cardTraits.innerHTML = ""
 })
 
-const checkTraits = (trait) => {
+const checkTraits = () => {
+
+      
+    output = []
+
+    if(undeadCheckbox.checked){
+        output += "<b>Undead:</b> <br> info <br><br>"
+    }
+
+    if(amphibiousCheckbox.checked){
+        output += "<b>Amphibious:</b> <br> info"
+    }
     
-    output = [""]
-
-    if(trait=="Amphibious"){
-        output += "Amphibious trait info"
-    }
-    if(trait=="Brutal"){
-        output += "Brutal Trait Info"
-    }
-    if(trait=="Bred for War"){
-        output += "Bred trait info"
-    }
-    if(trait=="Courageous"){
-        output += "Courageous trait info"
-    }
-
-    return `${trait}:  ${output}`
+    
+    
+    return output
     
 };
 
