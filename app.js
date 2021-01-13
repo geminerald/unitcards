@@ -48,10 +48,14 @@ updateBtn.addEventListener('click', () => {
     cardToughness.innerHTML = `${inputToughness.value}`
     cardSize.innerHTML = `${inputSize.value}`
     cardMorale.innerHTML = `+ ${inputMorale.value}`
+    cardTraits.innerHTML = checkTraits(inputTraits.value);
 
-})
+});
 
 const checkTraits = (trait) => {
+    
+    output = "None"
+
     switch (trait) {
         case "Amphibious":
             output = "This unit does not suffer terrain penalties for fighting in water or on land"
@@ -104,4 +108,9 @@ const checkTraits = (trait) => {
         default:
             output = "None"
     }
+ 
+
+ 
+    return `${trait}:  ${output}`
+    
 };

@@ -13,16 +13,22 @@
     <div class="container">
         <div class="input">
             <input id="input-name" type="text" placeholder="Unit Name">
-            <input id="input-image"  type="text" placeholder="Image">
-            <input id="input-type"  type="text" placeholder="Type">
-            <input id="input-cost"  type="text" placeholder="Cost">
-            <input id="input-attack"  type="text" placeholder="Attack">
-            <input id="input-defence"  type="text" placeholder="Defence">
-            <input id="input-power"  type="text" placeholder="Power">
-            <input id="input-toughness"  type="text" placeholder="Toughness">
-            <input id="input-morale"  type="text" placeholder="Morale">
-            <input id="input-size"  type="text" placeholder="Size">
-            <input id="input-traits"  type="text" placeholder="Traits">
+            <input id="input-image" type="text" placeholder="Image">
+            <input id="input-type" type="text" placeholder="Type">
+            <input id="input-cost" type="text" placeholder="Cost">
+            <input id="input-attack" type="text" placeholder="Attack">
+            <input id="input-defence" type="text" placeholder="Defence">
+            <input id="input-power" type="text" placeholder="Power">
+            <input id="input-toughness" type="text" placeholder="Toughness">
+            <input id="input-morale" type="text" placeholder="Morale">
+            <input id="input-size" type="text" placeholder="Size">
+            <label for="input-traits">Traits:</label>
+            <select name="input-traits" id="input-traits" multiple>
+                <option value="Amphibious">Amphibious</option>
+                <option value="Bred for War">Bred for War</option>
+                <option value="Brutal">Brutal</option>
+                <option value="Courageous">Courageous</option>
+            </select>
             <button id="update">Update</button>
         </div>
 
@@ -35,24 +41,31 @@
                     <h2 id="card-name">Unit Name</h2>
                     <hr>
                     <h3 id="card-type">Unit Type</h3>
-                    <h4 class="cost">Cost:<p id="card-cost"></p></h4>
+                    <h4 class="cost">Cost:<p id="card-cost"></p>
+                    </h4>
                 </div>
             </div>
             <div class="stats">
                 <hr>
                 <div class="row">
-                    <div class="col">ATTACK:</div><div class="card-value" id="card-attack"></div>
-                    <div class="col">DEFENCE:</div><div class="card-value" id="card-defence"></div>
+                    <div class="col">ATTACK:</div>
+                    <div class="card-value" id="card-attack"></div>
+                    <div class="col">DEFENCE:</div>
+                    <div class="card-value" id="card-defence"></div>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col">POWER:</div><div class="card-value" id="card-power"></div>
-                    <div class="col">TOUGHNESS:</div><div class="card-value" id="card-toughness"></div>
+                    <div class="col">POWER:</div>
+                    <div class="card-value" id="card-power"></div>
+                    <div class="col">TOUGHNESS:</div>
+                    <div class="card-value" id="card-toughness"></div>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col">MORALE:</div><div class="card-value" id="card-morale"></div>
-                    <div class="col">SIZE:</div><div class="card-value" id="card-size"></div>
+                    <div class="col">MORALE:</div>
+                    <div class="card-value" id="card-morale"></div>
+                    <div class="col">SIZE:</div>
+                    <div class="card-value" id="card-size"></div>
                 </div>
                 <hr>
             </div>
