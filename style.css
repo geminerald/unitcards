@@ -33,6 +33,10 @@
     justify-content: space-evenly;
 }
 
+label{
+    font-size: .75rem;
+}
+
 .card{
     width: 300px;
     height: 450px;
@@ -99,4 +103,8 @@
 
 .special{
     margin:12px;
+}
+
+#card-traits{
+    font-size: .75rem;
 }
