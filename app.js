@@ -71,6 +71,8 @@ updateBtn.addEventListener('click', () => {
     cardMorale.innerHTML = `+ ${inputMorale.value}`
     cardTraits.innerHTML = checkTraits();
     inputName.value = cardName.innerHTML
+    cardImage.classList.add("background:${inputImage}")
+    image_updated();
 
 });
 
@@ -160,62 +162,13 @@ const checkTraits = () => {
 
 };
 
+function image_updated(){
+  var selectedFile = inputImage.files[0];
+  var img = cardImage;
 
-
-
-    /**
-
-    switch (trait) {
-        case "Amphibious":
-            output += "This unit does not suffer terrain penalties for fighting in water or on land"
-            break
-        case "Bred for War":
-            output += "This unit cannot be diminished, and cannot have disadvantage on Morale checks"
-            break
-        case "Brutal":
-            output += "This unit inflicts 2 casualties on a successful Power check"
-            break
-        case "Courageous":
-            output += "Once per battle, this unit can choose to succeed on a Morale check it just failed."
-            break
-        case "Eternal":
-            output = "This unit cannot be horrified, and it always succeeds on Morale checks to attack undead and fiends."
-            break
-        case "Frenzy":
-            output = "If this unit diminishes an enemy unit, it immediately makes a free attack against that unit."
-            break
-        case "Horrify":
-            output = "If this unit inflicts a casualty on an enemy unit, that unit must make a DC 15 Morale check. Failure exhausts the unit."
-            break
-        case "Martial":
-            output = "If this unit succeeds on a Power check and its size is greater than the defending unit, it inflicts 2 casualties."
-            break
-        case "Mindless":
-            output = "This unit cannot fail Morale checks"
-            break
-        case "Regenerate":
-            output = "When this unit refreshes, increment its casualty die. This trait ceases to function if the unit suffers a casualty from battle magic"
-            break
-        case "Ravenous":
-            output = "While any enemy unit is diminished, this unit can spend a round feeding on the corpses to increment their casualty die. "
-            break
-        case "Hurl Rocks":
-            output = "If this unit succeeds on an Attack check, it inflicts 2 casualties. against fortifications, it inflicts 1d6 casualties."
-            break
-        case "Savage":
-            output = "This unit has advantage on the first Attack check it makes each battle."
-            break
-        case "Stalwart":
-            output = "Enemy battle magic has disadvantage on Power checks against this unit"
-            break
-        case "Twisting Roots":
-            output = "As an action, this unit can sap the walls of a fortification. Siege units have advantage on Power checks against sapped fortifications."
-            break
-        case "Undead":
-            output = "Green and regular troops must pass a Morale check to attack this unit. Each enemy unit need only do this once. "
-            break
-        default:
-            output = "None"
-             
-    }
- */
+  var reader = new FileReader();
+  reader.onload = function(){
+     img.src = this.result
+  }
+  reader.readAsDataURL(selectedFile);
+ }
