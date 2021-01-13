@@ -43,10 +43,10 @@ updateBtn.addEventListener('click',()=>{
     cardType.innerHTML = inputType.value
     cardCost.innerHTML = inputCost.value
     cardAttack.innerHTML = `+ ${inputAttack.value}`
-    cardDefence.innerHTML = `+ ${inputDefence.value}`
+    cardDefence.innerHTML = `${inputDefence.value}`
     cardPower.innerHTML = `+ ${inputPower.value}`
-    cardToughness.innerHTML = `+ ${inputToughness.value}`
-    cardSize.innerHTML = `+ ${inputSize.value}`
+    cardToughness.innerHTML = `${inputToughness.value}`
+    cardSize.innerHTML = `${inputSize.value}`
     cardMorale.innerHTML = `+ ${inputMorale.value}`
 
 })
