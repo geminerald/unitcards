@@ -93,7 +93,7 @@ const checkTraits = () => {
     output = []
 
     if (undeadCheckbox.checked) {
-        output += "<b>Undead:</b> <br> Green and regular troops must pass a Morale check to attack this unit. Each enemy unit need only do this once. <br> <br>"
+        output += "<br><b>Undead:</b> <br> Green and regular troops must pass a Morale check to attack this unit. Each enemy unit need only do this once. <br> <br>"
         }
 
     if(amphibiousCheckbox.checked){
@@ -101,59 +101,59 @@ const checkTraits = () => {
             }
 
     if(bredForWarCBX.checked){
-                output += "<b>Bred for War:</b> <br> This unit cannot be diminished, and cannot have disadvantage on Morale checks"
+                output += "<br><b>Bred for War:</b> <br> This unit cannot be diminished, and cannot have disadvantage on Morale checks"
             }
 
     if(brutalCBX.checked){
-                output += "<b>Brutal:</b> <br> This unit inflicts 2 casualties on a successful Power check"
+                output += "<br><b>Brutal:</b> <br> This unit inflicts 2 casualties on a successful Power check"
             }
 
     if(courageousCBX.checked){
-                output += "<b>Courageous:</b> <br> Once per battle, this unit can choose to succeed on a Morale check it just failed"
+                output += "<br><b>Courageous:</b> <br> Once per battle, this unit can choose to succeed on a Morale check it just failed"
             }
 
     if(eternalCBX.checked){
-                output += "<b>Eternal:</b> <br> This unit cannot be horrified, and it always succeeds on Morale checks to attack undead and fiends."
+                output += "<br><b>Eternal:</b> <br> This unit cannot be horrified, and it always succeeds on Morale checks to attack undead and fiends."
             }
 
     if(frenzyCBX.checked){
-                output += "<b>Frenzy:</b> <br> If this unit diminishes an enemy unit, it immediately makes a free attack against that unit."
+                output += "<br><b>Frenzy:</b> <br> If this unit diminishes an enemy unit, it immediately makes a free attack against that unit."
             }
 
     if(horrifyCBX.checked){
-                output += "<b>Horrify:</b> <br> If this unit inflicts a casualty on an enemy unit, that unit must make a DC 15 Morale check. Failure exhausts the unit."
+                output += "<br><b>Horrify:</b> <br> If this unit inflicts a casualty on an enemy unit, that unit must make a DC 15 Morale check. Failure exhausts the unit."
             }
 
     if(martialCBX.checked){
-                output += "<b>Martial:</b> <br> If this unit succeeds on a Power check and its size is greater than the defending unit, it inflicts 2 casualties."
+                output += "<br><b>Martial:</b> <br> If this unit succeeds on a Power check and its size is greater than the defending unit, it inflicts 2 casualties."
             }
 
     if(mindlessCBX.checked){
-                output += "<b>Mindless:</b> <br> This unit cannot fail Morale checks."
+                output += "<br><b>Mindless:</b> <br> This unit cannot fail Morale checks."
             }
 
     if(regenerateCBX.checked){
-                output += "<b>Regenerate:</b> <br> When this unit refreshes, increment its casualty die. This trait ceases to function if the unit suffers a casualty from battle magic."
+                output += "<br><b>Regenerate:</b> <br> When this unit refreshes, increment its casualty die. This trait ceases to function if the unit suffers a casualty from battle magic."
             }
 
     if(ravenousCBX.checked){
-                output += "<b>Ravenous:</b> <br> While any enemy unit is diminished, this unit can spend a round feeding on the corpses to increment their casualty die."
+                output += "<br><b>Ravenous:</b> <br> While any enemy unit is diminished, this unit can spend a round feeding on the corpses to increment their casualty die."
             }
 
     if(hurlRocksCBX.checked){
-                output += "<b>Hurl Rocks:</b> <br> If this unit succeeds on an Attack check, it inflicts 2 casualties. against fortifications, it inflicts 1d6 casualties"
+                output += "<br><b>Hurl Rocks:</b> <br> If this unit succeeds on an Attack check, it inflicts 2 casualties. against fortifications, it inflicts 1d6 casualties"
             }
 
     if(savageCBX.checked){
-                output += "<b>Savage:</b> <br> This unit has advantage on the first Attack check it makes each battle"
+                output += "<br><b>Savage:</b> <br> This unit has advantage on the first Attack check it makes each battle"
             }
 
     if(stalwartCBX.checked){
-                output += "<b>Stalwart:</b> <br> Enemy battle magic has disadvantage on Power checks against this unit."
+                output += "<br><b>Stalwart:</b> <br> Enemy battle magic has disadvantage on Power checks against this unit."
             }
 
     if(twistingRootsCBX.checked){
-                output += "<b>Twisting Roots:</b> <br> As an action, this unit can sap the walls of a fortification. Siege units have advantage on Power checks against sapped fortifications."
+                output += "<br><b>Twisting Roots:</b> <br> As an action, this unit can sap the walls of a fortification. Siege units have advantage on Power checks against sapped fortifications."
             }
 
     return output
