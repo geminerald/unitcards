@@ -15,6 +15,7 @@ const inputToughness = document.getElementById('input-toughness');
 const inputMorale = document.getElementById('input-morale');
 const inputSize = document.getElementById('input-size');
 const inputTraits = document.getElementById('input-traits');
+const inputTraitsValues = inputTraits.value
 
 // Output Selectors
 
@@ -30,6 +31,7 @@ const cardToughness = document.getElementById('card-toughness');
 const cardMorale = document.getElementById('card-morale');
 const cardSize = document.getElementById('card-size');
 const cardTraits = document.getElementById('card-traits');
+const cardTraitsValues = cardTraits.value
 
 
 // Button Selectors
@@ -54,20 +56,35 @@ updateBtn.addEventListener('click', () => {
 
 const checkTraits = (trait) => {
     
-    output = "None"
+    output = [""]
+
+    if(trait=="Amphibious"){
+        output += "Amphibious trait info"
+    }
+    if(trait=="Brutal"){
+        output += "Brutal Trait Info"
+    }
+    return `${trait}:  ${output}`
+    
+};
+
+
+
+
+    /**
 
     switch (trait) {
         case "Amphibious":
-            output = "This unit does not suffer terrain penalties for fighting in water or on land"
+            output += "This unit does not suffer terrain penalties for fighting in water or on land"
             break
         case "Bred for War":
-            output = "This unit cannot be diminished, and cannot have disadvantage on Morale checks"
+            output += "This unit cannot be diminished, and cannot have disadvantage on Morale checks"
             break
         case "Brutal":
-            output = "This unit inflicts 2 casualties on a successful Power check"
+            output += "This unit inflicts 2 casualties on a successful Power check"
             break
         case "Courageous":
-            output = "Once per battle, this unit can choose to succeed on a Morale check it just failed."
+            output += "Once per battle, this unit can choose to succeed on a Morale check it just failed."
             break
         case "Eternal":
             output = "This unit cannot be horrified, and it always succeeds on Morale checks to attack undead and fiends."
@@ -107,10 +124,6 @@ const checkTraits = (trait) => {
             break
         default:
             output = "None"
+             
     }
- 
-
- 
-    return `${trait}:  ${output}`
-    
-};
+ */
