@@ -26,7 +26,21 @@
 }
 
 .info-and-images{
+    width: 100%;
+    display: flex;
 
+}
+
+.images{
+    width: 75px;
+}
+
+.images img{
+    width: 75px;
+}
+
+.info{
+    width: 225px;
 }
 
 .stats{
