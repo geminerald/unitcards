@@ -16,6 +16,8 @@ const inputMorale = document.getElementById('input-morale');
 const inputSize = document.getElementById('input-size');
 const inputTraits = document.getElementById('input-traits');
 const inputTraitsValues = inputTraits.value
+const allInputs = document.getElementsByTagName('input')
+
 
 // Output Selectors
 
@@ -31,12 +33,13 @@ const cardToughness = document.getElementById('card-toughness');
 const cardMorale = document.getElementById('card-morale');
 const cardSize = document.getElementById('card-size');
 const cardTraits = document.getElementById('card-traits');
-const cardTraitsValues = cardTraits.value
+const cardTraitsValues = cardTraits.value;
 
 
 // Button Selectors
 
 const updateBtn = document.getElementById('update');
+const clearBtn = document.getElementById('clear')
 
 // Update Card Function
 
@@ -52,7 +55,22 @@ updateBtn.addEventListener('click', () => {
     cardMorale.innerHTML = `+ ${inputMorale.value}`
     cardTraits.innerHTML = checkTraits(inputTraits.value);
 
+    inputName.value = cardName.innerHTML
+
 });
+
+clearBtn.addEventListener('click',  () => {
+    cardName.innerHTML = ""
+    cardType.innerHTML = ""
+    cardCost.innerHTML = ""
+    cardAttack.innerHTML = ""
+    cardDefence.innerHTML = ""
+    cardPower.innerHTML = ""
+    cardToughness.innerHTML = ""
+    cardSize.innerHTML = ""
+    cardMorale.innerHTML = ""
+    cardTraits.innerHTML = ""
+})
 
 const checkTraits = (trait) => {
     
@@ -64,6 +82,13 @@ const checkTraits = (trait) => {
     if(trait=="Brutal"){
         output += "Brutal Trait Info"
     }
+    if(trait=="Bred for War"){
+        output += "Bred trait info"
+    }
+    if(trait=="Courageous"){
+        output += "Courageous trait info"
+    }
+
     return `${trait}:  ${output}`
     
 };
