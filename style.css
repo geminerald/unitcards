@@ -32,7 +32,8 @@
 }
 
 .images{
-    width: 75px;
+    width: 25%;
+    margin: 5px;
 }
 
 .images img{
@@ -40,7 +41,7 @@
 }
 
 .info{
-    width: 225px;
+    max-width: 75%;
 }
 
 .stats{
