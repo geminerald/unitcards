@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&family=Oswald&family=Roboto:wght@400;500&display=swap');
 
 :root {
-  --light-red: #ff0000;
+  --light-red: #e20000;
   --dark-red:#b40303;
   
 }
@@ -38,12 +38,13 @@
     height: 450px;
     border: 8px solid var(--dark-red);
     padding: 8px;
+    background-color: #fffae7;
 }
 
 .info-and-images{
     width: 100%;
     display: flex;
-
+    min-height: 20%;
 }
 
 .images{
@@ -58,10 +59,26 @@
 .info{
     max-width: 75%;
     margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+#card-name{
+    color: var(--light-red);
+}
+
+#card-type, .cost, #card-cost{
+    color: var(--dark-red);
+}
+
+.cost{
+    align-self: flex-end ;
+    font-weight: 100;
 }
 
 .stats{
     margin:10px;
+    min-height: 50%;
 }
 
 .row{
@@ -70,10 +87,15 @@
 }
 
 .col{
-    width: 50%;
+    width: 30%;
     font-weight: 600;
     font-size: small;
     color:  var(--light-red);
+}
+
+.card-value{
+    color: var(--dark-red);
+    width: 20%;
 }
 
 .special{
