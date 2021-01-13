@@ -45,12 +45,16 @@
 }
 
 .stats{
-
+    margin:10px;
 }
 
 .row{
     display: flex;
     justify-content: space-between;
+}
+
+.col{
+    width: 50%;
 }
 
 .special{
