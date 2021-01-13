@@ -1,4 +1,8 @@
+// Connection confirmation
+
 console.log("App connected")
+
+// Input Selectors
 
 const inputName = document.getElementById('input-name');
 const inputImage = document.getElementById('input-image');
@@ -12,17 +16,16 @@ const inputMorale = document.getElementById('input-morale');
 const inputSize = document.getElementById('input-size');
 const inputTraits = document.getElementById('input-traits');
 
-
+// Output Selectors
 
 
 const cardName = document.getElementById('card-name');
 
+// Button Selectors
+
 const updateBtn = document.getElementById('update');
 
-
-
-
-
+// Update Card Function
 
 updateBtn.addEventListener('click',()=>{
     cardName.innerHTML = inputName.value
