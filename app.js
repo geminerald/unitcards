@@ -20,6 +20,17 @@ const inputTraits = document.getElementById('input-traits');
 
 
 const cardName = document.getElementById('card-name');
+const cardImage = document.getElementById('card-image');
+const cardType = document.getElementById('card-type');
+const cardCost = document.getElementById('card-cost');
+const cardAttack = document.getElementById('card-attack');
+const cardDefence = document.getElementById('card-defence');
+const cardPower = document.getElementById('card-power');
+const cardToughness = document.getElementById('card-toughness');
+const cardMorale = document.getElementById('card-morale');
+const cardSize = document.getElementById('card-size');
+const cardTraits = document.getElementById('card-traits');
+
 
 // Button Selectors
 
@@ -29,4 +40,6 @@ const updateBtn = document.getElementById('update');
 
 updateBtn.addEventListener('click',()=>{
     cardName.innerHTML = inputName.value
+    cardAttack.innerHTML = `+ ${inputAttack.value}`
+
 })
